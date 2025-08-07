@@ -1,0 +1,88 @@
+﻿<Styles xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Design.PreviewWith>
+    <Grid RowDefinitions="*,*" Margin="0">
+      <Grid.Styles>
+        <Style Selector="Grid">
+          <Setter Property="Margin" Value="2" />
+        </Style>
+        <Style Selector="Image">
+          <Setter Property="Width" Value="64" />
+          <Setter Property="Height" Value="64" />
+        </Style>
+      </Grid.Styles>
+      <!-- Light Preview -->
+      <UniformGrid Grid.Row="0" Rows="1" Columns="20" Background="DarkGreen">
+        <UniformGrid.Styles>
+          <StyleInclude Source="/Styles/light.axaml" />
+          <Style Selector="Grid">
+            <Setter Property="Background" Value="White" />
+          </Style>
+        </UniformGrid.Styles>
+        <Grid>
+          <Image Source="{DynamicResource IconAccentBrush1Image}" />
+        </Grid>
+        <Grid>
+          <Image Source="{DynamicResource IconAccentBrush2Image}" />
+        </Grid>
+        <Grid>
+          <Image Source="{DynamicResource OpenFile}" />
+        </Grid>
+        <Grid>
+          <Image Source="{DynamicResource Exit}" />
+        </Grid>
+      </UniformGrid>
+      <!-- Dark Preview -->
+      <UniformGrid Grid.Row="1" Rows="1" Columns="20" Background="LightGreen">
+        <UniformGrid.Styles>
+          <StyleInclude Source="/Styles/dark.axaml" />
+          <Style Selector="Grid">
+            <Setter Property="Background" Value="Black" />
+          </Style>
+        </UniformGrid.Styles>
+        <Grid>
+          <Image Source="{DynamicResource IconAccentBrush1Image}" />
+        </Grid>
+        <Grid>
+          <Image Source="{DynamicResource IconAccentBrush2Image}" />
+        </Grid>
+        <Grid>
+          <Image Source="{DynamicResource OpenFile}" />
+        </Grid>
+        <Grid>
+          <Image Source="{DynamicResource Exit}" />
+        </Grid>
+      </UniformGrid>
+    </Grid>
+  </Design.PreviewWith>
+  
+  <!-- See https://github.com/FrankenApps/Avalonia-CustomTitleBarTemplate -->
+  <Style>
+    <Style.Resources>
+      <DrawingImage x:Key="IconAccentBrush1Image">
+        <DrawingGroup>
+          <GeometryDrawing Brush="{DynamicResource IconAccentBrush1}" Geometry="M0,0L32,0 32,32 0,32z" />
+        </DrawingGroup>
+      </DrawingImage>
+      <DrawingImage x:Key="IconAccentBrush2Image">
+        <DrawingGroup>
+          <GeometryDrawing Brush="{DynamicResource IconAccentBrush2}" Geometry="M0,0L32,0 32,32 0,32z" />
+        </DrawingGroup>
+      </DrawingImage>
+
+      <DrawingImage x:Key="OpenFile">
+        <DrawingGroup>
+          <!--<GeometryDrawing Brush="{DynamicResource IconAccentBrush1}" Geometry="M0.9370065,0L13.389938,0C13.620893,1.9479558E-07,13.843915,0.085998713,14.015911,0.2390138L16.510893,2.4770197C16.894861,2.8220209 16.927881,3.4129938 16.581875,3.7990109 16.235868,4.1870111 15.645906,4.2160028 15.259923,3.8699943L13.031908,1.8730159 1.872975,1.8730159 1.872975,22.477016 27.112821,22.477016 29.922802,8.3500046 8.2189473,8.3350204 6.65493,14.111996C6.524926,14.61401 6.0219382,14.916012 5.5139454,14.786007 5.0129717,14.656002 4.7129858,14.145016 4.8409756,13.644009L6.5849231,7.165007C6.6919783,6.7510055,7.0649622,6.4620041,7.4929379,6.4620041L31.063787,6.4770187C31.345829,6.4770187 31.610781,6.6029953 31.787783,6.8189987 31.96582,7.0370163 32.036802,7.3220199 31.981811,7.5960067L28.798847,23.597009C28.712849,24.03399,28.326803,24.35,27.880821,24.35L0.9370065,24.35C0.41900396,24.35,0,23.930993,0,23.413995L0,0.93600464C0,0.41900644,0.41900396,1.9479558E-07,0.9370065,0z" />-->
+          <GeometryDrawing Brush="{DynamicResource IconAccentBrush1}" Geometry="M0,0.40000916L10.100037,0.40000916 10.100037,3 17.900024,3 17.600037,3.1999969C16.100037,4,15,5,14.300049,6.1000061L0,6.1000061 0,3.5 0,3z M26.300049,0L32,5.6999969 26.300049,10.699997 26.300049,8C26.300049,8,19.100037,6,15.5,8.9000092L15.5,9 25.200012,9 25.200012,20.5 0,20.5 0,9 14.400024,9 14.400024,8.9000092C15.200012,6.5,17.800049,2.6999969,26.300049,2.6999969z" />
+        </DrawingGroup>
+      </DrawingImage>
+
+      <DrawingImage x:Key="Exit">
+        <DrawingGroup>
+          <!--<GeometryDrawing Brush="{DynamicResource IconAccentBrush1}" Geometry="M23.731991,5.4949952L29.977993,12 29.999996,12 29.999996,12.022995 30.952999,13.016007 23.76199,20.503998 22.425993,19.082001 27.307003,14 10.999998,14 10.999998,12 27.275997,12 22.395994,6.9170075z M0,0L19.999998,0 19.999998,8.0000001 17.999998,8.0000001 17.999998,2.0000003 1.9999998,2.0000003 1.9999998,24 17.999998,24 17.999998,18 19.999998,18 19.999998,26 0,26z" />-->
+          <GeometryDrawing Brush="{DynamicResource IconAccentBrush1}" Geometry="M25.399994,10.400033L32,16.60005 25.399994,23.000019 25.399994,18.599991 14,18.599991 14,14.800061 25.399994,14.800061z M0,0L22.200012,0 22.200012,11.800058 18.800018,11.800058 18.800018,3.2000146 3.2000122,3.2000146 3.2000122,26.400047 18.800018,26.400047 18.800018,21.400042 22.200012,21.400042 22.200012,29.6 0,29.6z" />
+        </DrawingGroup>
+      </DrawingImage>
+
+    </Style.Resources>
+  </Style>
+</Styles>

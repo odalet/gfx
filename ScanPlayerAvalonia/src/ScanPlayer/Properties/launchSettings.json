@@ -1,0 +1,32 @@
+{
+    "profiles": {
+        "ScanPlayer": {
+            "commandName": "Project"
+        },
+        "WSL": {
+            "commandName": "WSL2",
+            "distributionName": ""
+        },
+        "WSL (LIBGL_ALWAYS_INDIRECT)": {
+            "commandName": "WSL2",
+            "distributionName": "",
+            "environmentVariables": {
+                "LIBGL_ALWAYS_INDIRECT": "1"
+            }
+        },
+        "WSL (GALLIUM_DRIVER)": {
+            "commandName": "WSL2",
+            "distributionName": "",
+            "environmentVariables": {
+                "GALLIUM_DRIVER": "llvmpipe"
+            }
+        },
+        "WSL (NVIDIA)": {
+            "commandName": "WSL2",
+            "distributionName": "",
+            "environmentVariables": {
+                "MESA_D3D12_DEFAULT_ADAPTER_NAME": "NVIDIA"
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="AvaloniaDockApplication.Views.Tools.LeftTopTool1View"
+             xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="400">
+  <Grid Focusable="True" Background="WhiteSmoke">
+    <StackPanel>
+      <TextBlock Text="{Binding Id}"/>
+      <TextBlock Text="{Binding Title}"/>
+      <TextBlock Text="{Binding Context}"/>
+      <TextBlock Text="{Binding WhoAmI}"/>
+      <Button Content="Open..." Command="{Binding OpenCommand, Mode=OneTime}" />
+      <Menu>
+        <MenuItem Header="_File">
+          <MenuItem Header="_Open..." Command="{Binding OpenCommand, Mode=OneTime}" InputGesture="Ctrl+O" />
+          <!--<MenuItem Header="E_xit" Command="{Binding ExitCommand, Mode=OneTime}" InputGesture="Alt+F4" />-->
+        </MenuItem>
+      </Menu>
+    </StackPanel>
+  </Grid>
+</UserControl>

@@ -1,0 +1,77 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:c="using:ScanPlayer.Controls"
+             xmlns:vm="using:ScanPlayer.ViewModels"
+             xmlns:vmd="using:ScanPlayer.ViewModels.Documents"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="ScanPlayer.Views.Documents.TeapotDocumentView"
+             d:DataContext="{x:Static vm:DesignerViewModels.TeapotDocumentViewModel}"
+             x:DataType="vmd:TeapotDocumentViewModel" x:CompileBindings="True">
+  <Grid>
+    <Grid ColumnDefinitions="*,*,auto" RowDefinitions="*,*" Background="LightGray">
+      <Grid Grid.Row="0" Grid.Column="0" Background="DarkGray" Margin="0,0,1,1">
+        <c:TeapotControl1 x:Name="gl1"
+                          Yaw="{Binding #yaw.Value, Mode=TwoWay}"
+                          Pitch="{Binding #pitch.Value, Mode=TwoWay}"
+                          Roll="{Binding #roll.Value, Mode=TwoWay}"
+                          Disco="{Binding #disco.Value, Mode=TwoWay}" />
+        <StackPanel Spacing="10" Margin="4">
+          <TextBlock Text="{Binding #gl2.Info}" />
+        </StackPanel>
+      </Grid>
+      <Grid Grid.Row="0" Grid.Column="1" Background="DarkGray" Margin="1,0,1,1">
+        <c:TeapotControl2 x:Name="gl2"
+                          Yaw="{Binding #yaw.Value, Mode=TwoWay}"
+                          Pitch="{Binding #pitch.Value, Mode=TwoWay}"
+                          Roll="{Binding #roll.Value, Mode=TwoWay}"
+                          Disco="{Binding #disco.Value, Mode=TwoWay}" />
+        <StackPanel Spacing="10" Margin="4">
+          <TextBlock Text="{Binding #gl2.Info}" />
+        </StackPanel>
+      </Grid>
+      <Grid Grid.Row="1" Grid.Column="0" Background="DarkGray" Margin="0,1,1,0">
+        <c:TeapotControl3 x:Name="gl3"
+                          Yaw="{Binding #yaw.Value, Mode=TwoWay}"
+                          Pitch="{Binding #pitch.Value, Mode=TwoWay}"
+                          Roll="{Binding #roll.Value, Mode=TwoWay}"
+                          Disco="{Binding #disco.Value, Mode=TwoWay}" />
+        <StackPanel Spacing="10" Margin="4">
+          <TextBlock Text="{Binding #gl3.Info}" />
+        </StackPanel>
+      </Grid>
+      <Grid Grid.Row="1" Grid.Column="1" Background="DarkGray" Margin="1,1,1,0">
+        <c:TeapotControl4 x:Name="gl4"
+                          Yaw="{Binding #yaw.Value, Mode=TwoWay}"
+                          Pitch="{Binding #pitch.Value, Mode=TwoWay}"
+                          Roll="{Binding #roll.Value, Mode=TwoWay}"
+                          Disco="{Binding #disco.Value, Mode=TwoWay}" />
+      </Grid>
+      <Grid Grid.Row="0" Grid.RowSpan="2" Grid.Column="2" ColumnDefinitions="*,*" RowDefinitions="*,*" Background="DarkGray" Margin="1,0,0,0">
+        <DockPanel Grid.Row="0" Grid.Column="0" LastChildFill="True" Margin="2,10">
+          <TextBlock DockPanel.Dock="Top" HorizontalAlignment="Center" Text="Yaw" />
+          <Slider x:Name="yaw" Maximum="10" Orientation="Vertical" />
+        </DockPanel>
+        <DockPanel Grid.Row="0" Grid.Column="1" LastChildFill="True" Margin="2,10">
+          <TextBlock DockPanel.Dock="Top" HorizontalAlignment="Center" Text="Pitch" />
+          <Slider x:Name="pitch" Maximum="10" Orientation="Vertical" />
+        </DockPanel>
+        <DockPanel Grid.Row="1" Grid.Column="0" LastChildFill="True" Margin="2,10">
+          <TextBlock DockPanel.Dock="Top" HorizontalAlignment="Center" Text="Roll" />
+          <Slider x:Name="roll" Maximum="10" Orientation="Vertical" />
+        </DockPanel>
+        <DockPanel Grid.Row="1" Grid.Column="1" LastChildFill="True" Margin="2,10">
+          <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock FontWeight="Bold" Foreground="#C000C0">D</TextBlock>
+            <TextBlock FontWeight="Bold" Foreground="#00C090">i</TextBlock>
+            <TextBlock FontWeight="Bold" Foreground="#90C000">s</TextBlock>
+            <TextBlock FontWeight="Bold" Foreground="#C09000">c</TextBlock>
+            <TextBlock FontWeight="Bold" Foreground="#00C090">o</TextBlock>
+          </StackPanel>
+          <Slider x:Name="disco" Maximum="1" Orientation="Vertical" />
+        </DockPanel>
+      </Grid>
+    </Grid>
+  </Grid>
+</UserControl>

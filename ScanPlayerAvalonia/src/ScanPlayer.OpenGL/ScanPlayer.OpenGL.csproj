@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>ScanPlayer.OpenGL</RootNamespace>
+    <AssemblyName>ScanPlayer.OpenGL</AssemblyName>
+    <Description>OpenGL Binding</Description>
+    <!--<SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\gwi.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>False</DelaySign>-->
+    <AutoGenerateBindingRedirects>True</AutoGenerateBindingRedirects>
+    <GenerateBindingRedirectsOutputType>True</GenerateBindingRedirectsOutputType>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>

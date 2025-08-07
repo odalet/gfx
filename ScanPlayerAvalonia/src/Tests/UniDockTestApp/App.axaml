@@ -1,0 +1,30 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:UniDockTestApp"
+             xmlns:np="https://np.com/visuals"
+             x:Class="UniDockTestApp.App">
+
+  <Application.Resources>
+    <!-- Define the dock manager-->
+    <np:DockManager x:Key="TheDockManager"/>
+  </Application.Resources>
+
+  <Application.DataTemplates>
+    <local:ViewLocator/>
+  </Application.DataTemplates>
+
+  <Application.Styles>
+    <FluentTheme Mode="Dark"/>
+    <StyleInclude Source="avares://NP.Avalonia.Visuals/Themes/CustomWindowStyles.axaml"/>
+    <StyleInclude Source="avares://UniDockTestApp/Styles/Docking.axaml" />
+    <!--<StyleInclude Source="avares://NP.Avalonia.UniDock/Themes/DockStyles.axaml"/>-->
+    <Styles>
+      <Styles.Resources>
+        <!--<Color x:Key="TabbedDockGroupBackgroundColor">Blue</Color>
+        <Color x:Key="DockItemPresenterBackgroundColor">Yellow</Color>-->
+        <Color x:Key="TabbedDockGroupBackgroundColor">Transparent</Color>
+        <Color x:Key="DockItemPresenterBackgroundColor">Transparent</Color>
+      </Styles.Resources>
+    </Styles>
+  </Application.Styles>
+</Application>

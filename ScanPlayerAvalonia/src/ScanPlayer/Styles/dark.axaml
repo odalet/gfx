@@ -1,0 +1,73 @@
+﻿<Style xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Design.PreviewWith>
+    <Grid Margin="0">
+      <Grid.Styles>
+        <Style Selector="Grid">
+          <Setter Property="Margin" Value="2" />
+        </Style>
+        <Style Selector="Image">
+          <Setter Property="Width" Value="64" />
+          <Setter Property="Height" Value="64" />
+        </Style>
+      </Grid.Styles>
+      <UniformGrid Rows="1" Columns="20" Background="LightGreen">
+        <UniformGrid.Resources>
+          <DrawingImage x:Key="ThemeAccentColorImage">
+            <DrawingGroup>
+              <GeometryDrawing Brush="{DynamicResource ThemeAccentBrush}" Geometry="M0,0L32,0 32,32 0,32z" />
+            </DrawingGroup>
+          </DrawingImage>
+          <DrawingImage x:Key="ThemeAccentColorImage2">
+            <DrawingGroup>
+              <GeometryDrawing Brush="{DynamicResource ThemeAccentBrush2}" Geometry="M0,0L32,0 32,32 0,32z" />
+            </DrawingGroup>
+          </DrawingImage>
+          <DrawingImage x:Key="ThemeAccentColorImage3">
+            <DrawingGroup>
+              <GeometryDrawing Brush="{DynamicResource ThemeAccentBrush3}" Geometry="M0,0L32,0 32,32 0,32z" />
+            </DrawingGroup>
+          </DrawingImage>
+          <DrawingImage x:Key="ThemeAccentColorImage4">
+            <DrawingGroup>
+              <GeometryDrawing Brush="{DynamicResource ThemeAccentBrush4}" Geometry="M0,0L32,0 32,32 0,32z" />
+            </DrawingGroup>
+          </DrawingImage>
+        </UniformGrid.Resources>
+        <UniformGrid.Styles>
+          <Style Selector="Grid">
+            <Setter Property="Background" Value="Black" />
+          </Style>
+        </UniformGrid.Styles>
+        <Grid>
+          <Image Source="{DynamicResource ThemeAccentColorImage}" />
+        </Grid>
+        <Grid>
+          <Image Source="{DynamicResource ThemeAccentColorImage2}" />
+        </Grid>
+        <Grid>
+          <Image Source="{DynamicResource ThemeAccentColorImage3}" />
+        </Grid>
+        <Grid>
+          <Image Source="{DynamicResource ThemeAccentColorImage4}" />
+        </Grid>
+      </UniformGrid>
+    </Grid>
+  </Design.PreviewWith>
+
+  <Style.Resources>
+    <SolidColorBrush x:Key="IconTransparentBrush" Color="#00000000" />
+    <SolidColorBrush x:Key="IconAccentBrush1" Color="#FFA0A0A0" />
+    <SolidColorBrush x:Key="IconAccentBrush2" Color="#80A0A0A0" />
+
+    <Color x:Key="ThemeAccentColor_with_transparency">#CC119EDA</Color>
+    <Color x:Key="ThemeAccentColor2_with_transparency">#99119EDA</Color>
+    <Color x:Key="ThemeAccentColor3_with_transparency">#66119EDA</Color>
+    <Color x:Key="ThemeAccentColor4_with_transparency">#33119EDA</Color>
+
+    <!-- Same as above, but alpha multiplied with a black background -->
+    <Color x:Key="ThemeAccentColor">#FF0D7EAE</Color>
+    <Color x:Key="ThemeAccentColor2">#FF0A5F83</Color>
+    <Color x:Key="ThemeAccentColor3">#FF063F57</Color>
+    <Color x:Key="ThemeAccentColor4">#FF03202C</Color>
+  </Style.Resources>
+</Style>

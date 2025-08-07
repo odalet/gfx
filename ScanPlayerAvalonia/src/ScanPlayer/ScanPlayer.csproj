@@ -1,0 +1,66 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <!--<OutputType>WinExe</OutputType>-->
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AvaloniaResource Include="Assets\**" />
+    <AvaloniaResource Include="Styles\dark.axaml" />
+    <AvaloniaResource Include="Styles\light.axaml" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\teapot.bin" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Content Include="nlog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="0.10.12" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.10.12" />
+    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="0.10.12" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.12" />
+    <PackageReference Include="Common.Logging" Version="3.4.1" />
+    <!--<PackageReference Include="Dock.Avalonia" Version="0.10.11" />
+    <PackageReference Include="Dock.Model.ReactiveUI" Version="0.10.11" />-->
+    <PackageReference Include="MessageBox.Avalonia" Version="1.7.1" />
+    <PackageReference Include="Microsoft.Bcl.HashCode" Version="1.1.1" />
+    <PackageReference Include="NLog" Version="4.7.13" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NCoreServerMock\NCoreServerMock.csproj" />
+    <ProjectReference Include="..\ScanPlayer.OpenGL\ScanPlayer.OpenGL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="AddUp.Ail">
+      <HintPath>..\..\lib\AddUp.Ail.dll</HintPath>
+    </Reference>
+    <Reference Include="AddUp.Geometry">
+      <HintPath>..\..\lib\AddUp.Geometry.dll</HintPath>
+    </Reference>
+    <Reference Include="AddUp.NCore.Printing.Common">
+      <HintPath>..\..\lib\AddUp.NCore.Printing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="AddUp.NCore.Scan">
+      <HintPath>..\..\lib\AddUp.NCore.Scan.dll</HintPath>
+    </Reference>
+    <Reference Include="AddUp.NCore.Utils">
+      <HintPath>..\..\lib\AddUp.NCore.Utils.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
+</Project>

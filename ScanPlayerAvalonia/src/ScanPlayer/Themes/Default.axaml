@@ -1,0 +1,191 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:c="clr-namespace:ScanPlayer.Controls"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Design.PreviewWith>
+    <Border Padding="4">
+      <Grid ColumnDefinitions="auto, *">
+        <StackPanel Grid.Column="0" Orientation="Vertical" Margin="0">
+          <c:GroupBox Header="GroupBox 1" Margin="2">
+            <Button Content="Button" Margin="10" Width="100"/>
+          </c:GroupBox>
+          <c:GroupBox Header="GroupBox 2" Margin="2">
+            <Button Content="Button" Margin="10" Width="100"/>
+          </c:GroupBox>
+        </StackPanel>
+        <TabControl Grid.Column="1" Width="200" Margin="2" TabStripPlacement="Top">
+          <TabItem Header="Tab1">
+            <Button Content="Button" Margin="10" Width="100" Height="30"/>
+          </TabItem>
+          <TabItem Header="Tests">
+            <Button Content="Button" Margin="10" Width="100"/>
+          </TabItem>
+          <TabItem Header="Disabled" IsEnabled="False">
+            <Button Content="Button" Margin="10" Width="100" />
+          </TabItem>
+        </TabControl>
+      </Grid>
+    </Border>
+  </Design.PreviewWith>
+
+  <StyleInclude Source="avares://ScanPlayer/Styles/dark.axaml" />
+
+  <Style Selector="c|GroupBox">
+    <Setter Property="HeaderBackground" Value="{DynamicResource ThemeAccentColor3}" />
+    <Setter Property="HeaderForeground" Value="{DynamicResource ThemeForegroundBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccentColor2}" />
+    <Setter Property="BorderThickness" Value="{DynamicResource ThemeBorderThickness}" />
+    <Setter Property="HeaderMargin" Value="4" />
+    <Setter Property="FontSize" Value="{DynamicResource FontSizeNormal}" />
+    <Setter Property="Margin" Value="5" />
+  </Style>
+
+  <Style Selector="TabItem">
+    <Setter Property="Background" Value="Transparent"/>
+    <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccentBrush2}"/>
+    <Setter Property="BorderThickness" Value="0"/>
+    <Setter Property="FontSize" Value="{DynamicResource FontSizeNormal}"/>
+    <Setter Property="Foreground" Value="{DynamicResource ThemeForegroundBrush}"/>
+    <Setter Property="HorizontalContentAlignment" Value="Left"/>
+    <Setter Property="Padding" Value="4"/>
+    <Setter Property="Template">
+      <ControlTemplate>
+        <ContentPresenter
+            Name="PART_ContentPresenter"
+            Background="{TemplateBinding Background}"
+            BorderBrush="{TemplateBinding BorderBrush}"
+            BorderThickness="{TemplateBinding BorderThickness}"
+            CornerRadius="{TemplateBinding CornerRadius}"
+            ContentTemplate="{TemplateBinding HeaderTemplate}"
+            Content="{TemplateBinding Header}"
+            HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+            VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+            Padding="{TemplateBinding Padding}"/>
+      </ControlTemplate>
+    </Setter>
+  </Style>
+  <Style Selector="TabItem:disabled">
+    <Setter Property="Opacity" Value="{DynamicResource ThemeDisabledOpacity}"/>
+  </Style>
+  <Style Selector="TabItem:pointerover">
+    <Setter Property="Background" Value="{DynamicResource ThemeAccentBrush3}"/>
+  </Style>
+  <Style Selector="TabItem:selected">
+    <Setter Property="Background" Value="{DynamicResource ThemeAccentBrush4}"/>
+  </Style>
+  <Style Selector="TabItem:selected:focus">
+    <Setter Property="Background" Value="{DynamicResource ThemeAccentBrush3}"/>
+  </Style>
+  <Style Selector="TabItem:selected:pointerover">
+    <Setter Property="Background" Value="{DynamicResource ThemeAccentBrush3}"/>
+  </Style>
+  <Style Selector="TabItem:selected:focus:pointerover">
+    <Setter Property="Background" Value="{DynamicResource ThemeAccentBrush3}"/>
+  </Style>
+  <Style Selector="TabItem[TabStripPlacement=Right]">
+    <Setter Property="HorizontalContentAlignment" Value="Right"/>
+  </Style>
+  <Style Selector="TabItem[TabStripPlacement=Top]">
+    <Setter Property="BorderThickness" Value="0 0 0 1"/>
+  </Style>
+  <Style Selector="TabItem[TabStripPlacement=Top]:selected">
+    <Setter Property="BorderThickness" Value="1 1 1 0"/>
+    <Setter Property="Padding" Value="4 4 4 5"/>
+  </Style>
+  <Style Selector="TabItem[TabStripPlacement=Bottom]">
+    <Setter Property="BorderThickness" Value="0 1 0 0"/>
+  </Style>
+  <Style Selector="TabItem[TabStripPlacement=Bottom]:selected">
+    <Setter Property="BorderThickness" Value="1 0 1 1"/>
+    <Setter Property="Padding" Value="4 5 4 4"/>
+  </Style>
+  <Style Selector="TabItem[TabStripPlacement=Left]">
+    <Setter Property="BorderThickness" Value="0 0 1 0"/>
+  </Style>
+  <Style Selector="TabItem[TabStripPlacement=Left]:selected">
+    <Setter Property="BorderThickness" Value="1 1 0 1"/>
+    <Setter Property="Padding" Value="4 4 5 4"/>
+  </Style>
+  <Style Selector="TabItem[TabStripPlacement=Right]">
+    <Setter Property="BorderThickness" Value="1 0 0 0"/>
+  </Style>
+  <Style Selector="TabItem[TabStripPlacement=Right]:selected">
+    <Setter Property="BorderThickness" Value="0 1 1 1"/>
+    <Setter Property="Padding" Value="5 4 4 4"/>
+  </Style>
+  
+  <Style Selector="TabControl">
+    <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccentBrush2}"/>
+    <Setter Property="Template">
+      <ControlTemplate>
+        <Border
+            BorderBrush="{TemplateBinding BorderBrush}"
+            BorderThickness="{TemplateBinding BorderThickness}"
+            CornerRadius="{TemplateBinding CornerRadius}"
+            Background="{TemplateBinding Background}"
+            HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+            VerticalAlignment="{TemplateBinding VerticalAlignment}">
+          <DockPanel>
+            <ItemsPresenter ZIndex="1"
+              Name="PART_ItemsPresenter"
+              Items="{TemplateBinding Items}"
+              ItemsPanel="{TemplateBinding ItemsPanel}"
+              ItemTemplate="{TemplateBinding ItemTemplate}">
+            </ItemsPresenter>         
+            <Border Name="innerBorder" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1" ZIndex="0">
+              <ContentPresenter
+                  Name="PART_SelectedContentHost"
+                  Margin="{TemplateBinding Padding}"
+                  HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                  VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                  Content="{TemplateBinding SelectedContent}"
+                  ContentTemplate="{TemplateBinding SelectedContentTemplate}">
+              </ContentPresenter>
+            </Border>
+          </DockPanel>
+        </Border>
+      </ControlTemplate>
+    </Setter>
+  </Style>
+  <Style Selector="TabControl[TabStripPlacement=Top] /template/ Border#innerBorder">
+    <Setter Property="Margin" Value="0 -1 0 0"/>
+  </Style>
+  <Style Selector="TabControl[TabStripPlacement=Bottom] /template/ Border#innerBorder">
+    <Setter Property="Margin" Value="0 0 0 -1"/>
+  </Style>
+  <Style Selector="TabControl[TabStripPlacement=Left] /template/ Border#innerBorder">
+    <Setter Property="Margin" Value="-1 0 0 0"/>
+  </Style>
+  <Style Selector="TabControl[TabStripPlacement=Right] /template/ Border#innerBorder">
+    <Setter Property="Margin" Value="0 0 -1 0"/>
+  </Style>
+  <Style Selector="TabControl[TabStripPlacement=Top]">
+    <Setter Property="Padding" Value="0 4 0 0"/>
+  </Style>
+  <Style Selector="TabControl[TabStripPlacement=Top] /template/ ItemsPresenter#PART_ItemsPresenter">
+    <Setter Property="DockPanel.Dock" Value="Top"/>
+  </Style>
+  <Style Selector="TabControl[TabStripPlacement=Bottom] /template/ ItemsPresenter#PART_ItemsPresenter">
+    <Setter Property="DockPanel.Dock" Value="Bottom"/>
+  </Style>
+  <Style Selector="TabControl[TabStripPlacement=Bottom]">
+    <Setter Property="Padding" Value="0 0 0 4"/>
+  </Style>
+  <Style Selector="TabControl[TabStripPlacement=Left] /template/ ItemsPresenter#PART_ItemsPresenter">
+    <Setter Property="DockPanel.Dock" Value="Left"/>
+  </Style>
+  <Style Selector="TabControl[TabStripPlacement=Left] /template/ ItemsPresenter#PART_ItemsPresenter > WrapPanel">
+    <Setter Property="Orientation" Value="Vertical"/>
+  </Style>
+  <Style Selector="TabControl[TabStripPlacement=Left]">
+    <Setter Property="Padding" Value="4 0 0 0"/>
+  </Style>
+  <Style Selector="TabControl[TabStripPlacement=Right] /template/ ItemsPresenter#PART_ItemsPresenter">
+    <Setter Property="DockPanel.Dock" Value="Right"/>
+  </Style>
+  <Style Selector="TabControl[TabStripPlacement=Right] /template/ ItemsPresenter#PART_ItemsPresenter > WrapPanel">
+    <Setter Property="Orientation" Value="Vertical"/>
+  </Style>
+  <Style Selector="TabControl[TabStripPlacement=Right]">
+    <Setter Property="Padding" Value="0 0 4 0"/>
+  </Style>
+</Styles>

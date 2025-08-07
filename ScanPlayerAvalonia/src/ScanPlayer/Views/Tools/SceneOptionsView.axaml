@@ -1,0 +1,24 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:ScanPlayer.ViewModels"
+             xmlns:vmt="using:ScanPlayer.ViewModels.Tools"
+             mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="300"
+             x:Class="ScanPlayer.Views.Tools.SceneOptionsView"
+             d:DataContext="{x:Static vm:DesignerViewModels.SceneOptionsViewModel}"
+             x:DataType="vmt:SceneOptionsViewModel" x:CompileBindings="True">
+  <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+    <StackPanel Orientation="Vertical" Spacing="0" Margin="0">
+      <CheckBox Content="Draw Jumps" IsChecked="{Binding Workspace.SceneOptions.DrawJumps, Mode=TwoWay}" Margin="2" />
+      <CheckBox Content="Draw Marks" IsChecked="{Binding Workspace.SceneOptions.DrawMarks, Mode=TwoWay}" Margin="2" />
+      <CheckBox Content="Draw Hulls" IsChecked="{Binding Workspace.SceneOptions.DrawHulls, Mode=TwoWay}" Margin="2" />
+      <CheckBox Content="Draw Part Bounds" IsChecked="{Binding Workspace.SceneOptions.DrawPartBounds, Mode=TwoWay}" Margin="2" />
+      <CheckBox Content="Show Platform" IsChecked="{Binding Workspace.SceneOptions.DrawPlatform, Mode=TwoWay}" Margin="2" />
+      <CheckBox Content="Show Heads" IsChecked="{Binding Workspace.SceneOptions.DrawHeads, Mode=TwoWay}" Margin="2" />
+      <CheckBox Content="Show Head Fields" IsChecked="{Binding Workspace.SceneOptions.DrawHeadFields, Mode=TwoWay}" Margin="2" />
+      <CheckBox Content="Show Reference" IsChecked="{Binding Workspace.SceneOptions.DrawReference, Mode=TwoWay}" Margin="2" />
+      <CheckBox Content="Render Wobbling" IsChecked="{Binding Workspace.SceneOptions.DrawWobbling, Mode=TwoWay}" Margin="2" />
+    </StackPanel>
+  </ScrollViewer>
+</UserControl>

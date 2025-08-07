@@ -1,0 +1,26 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:np="https://np.com/visuals"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="UniDockTestApp.Views.RootDockView">
+  <np:RootDockGroup TheDockManager="{StaticResource TheDockManager}" Grid.Row="1">
+    <np:StackDockGroup TheOrientation="Horizontal">
+      <np:StackDockGroup TheOrientation="Vertical">
+        <np:DockItem Header="Tool #1" DockId="Tool1">
+          <TextBlock Text="Hi World!"/>
+        </np:DockItem>
+        <np:TabbedDockGroup>
+          <np:DockItem Header="Tool #2" DockId="Tool2">
+            <TextBlock Text="Hello World!" />
+          </np:DockItem>
+          <np:DockItem Header="Tool #3" DockId="Tool3">
+            <TextBlock Text="Hello World!"/>
+          </np:DockItem>
+        </np:TabbedDockGroup>
+      </np:StackDockGroup>
+      <np:TabbedDockGroup IsStableGroup="True" DockId="Documents" />
+    </np:StackDockGroup>
+  </np:RootDockGroup>
+</UserControl>

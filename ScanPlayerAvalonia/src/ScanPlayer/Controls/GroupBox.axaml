@@ -1,0 +1,24 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:c="clr-namespace:ScanPlayer.Controls"
+             mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="100"
+             x:Class="ScanPlayer.Controls.GroupBox">
+  <UserControl.Styles>
+    <Style Selector="c|GroupBox">
+      <Setter Property="Template">
+        <ControlTemplate>
+          <Border BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">
+            <Grid RowDefinitions="Auto,*" ColumnDefinitions="*">
+              <DockPanel LastChildFill="True" Grid.Row="0" Background="{TemplateBinding HeaderBackground}">
+                <TextBlock Text="{TemplateBinding Header}" Margin="{TemplateBinding HeaderMargin}" Foreground="{TemplateBinding HeaderForeground}" />
+              </DockPanel>
+              <ContentControl Grid.Row="1" Content="{TemplateBinding Content}" Margin="{TemplateBinding Margin}" />
+            </Grid>
+          </Border>
+        </ControlTemplate>
+      </Setter>
+    </Style>
+  </UserControl.Styles>
+</UserControl>

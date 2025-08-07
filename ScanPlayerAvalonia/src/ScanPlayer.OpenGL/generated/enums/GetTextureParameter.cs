@@ -1,0 +1,66 @@
+// This file is auto generated, do not edit.
+using System;
+
+#pragma warning disable CA1069 // Enums values should not be duplicated
+namespace ScanPlayer.OpenGL
+{
+    public enum GetTextureParameter : uint
+    {
+        TextureWidth = GLConstants.GL_TEXTURE_WIDTH,
+        TextureHeight = GLConstants.GL_TEXTURE_HEIGHT,
+        TextureInternalFormat = GLConstants.GL_TEXTURE_INTERNAL_FORMAT,
+        TextureComponents = GLConstants.GL_TEXTURE_COMPONENTS,
+        TextureBorderColor = GLConstants.GL_TEXTURE_BORDER_COLOR,
+        TextureBorderColorNV = GLConstants.GL_TEXTURE_BORDER_COLOR_NV,
+        TextureBorder = GLConstants.GL_TEXTURE_BORDER,
+        TextureMagFilter = GLConstants.GL_TEXTURE_MAG_FILTER,
+        TextureMinFilter = GLConstants.GL_TEXTURE_MIN_FILTER,
+        TextureWrapS = GLConstants.GL_TEXTURE_WRAP_S,
+        TextureWrapT = GLConstants.GL_TEXTURE_WRAP_T,
+        TextureRedSize = GLConstants.GL_TEXTURE_RED_SIZE,
+        TextureGreenSize = GLConstants.GL_TEXTURE_GREEN_SIZE,
+        TextureBlueSize = GLConstants.GL_TEXTURE_BLUE_SIZE,
+        TextureAlphaSize = GLConstants.GL_TEXTURE_ALPHA_SIZE,
+        TextureLuminanceSize = GLConstants.GL_TEXTURE_LUMINANCE_SIZE,
+        TextureIntensitySize = GLConstants.GL_TEXTURE_INTENSITY_SIZE,
+        TexturePriority = GLConstants.GL_TEXTURE_PRIORITY,
+        TextureResident = GLConstants.GL_TEXTURE_RESIDENT,
+        TextureDepthExt = GLConstants.GL_TEXTURE_DEPTH_EXT,
+        TextureWrapRExt = GLConstants.GL_TEXTURE_WRAP_R_EXT,
+        DetailTextureLevelSgis = GLConstants.GL_DETAIL_TEXTURE_LEVEL_SGIS,
+        DetailTextureModeSgis = GLConstants.GL_DETAIL_TEXTURE_MODE_SGIS,
+        DetailTextureFuncPointsSgis = GLConstants.GL_DETAIL_TEXTURE_FUNC_POINTS_SGIS,
+        SharpenTextureFuncPointsSgis = GLConstants.GL_SHARPEN_TEXTURE_FUNC_POINTS_SGIS,
+        ShadowAmbientSgix = GLConstants.GL_SHADOW_AMBIENT_SGIX,
+        DualTextureSelectSgis = GLConstants.GL_DUAL_TEXTURE_SELECT_SGIS,
+        QuadTextureSelectSgis = GLConstants.GL_QUAD_TEXTURE_SELECT_SGIS,
+        Texture4dsizeSgis = GLConstants.GL_TEXTURE_4DSIZE_SGIS,
+        TextureWrapQSgis = GLConstants.GL_TEXTURE_WRAP_Q_SGIS,
+        TextureMinLodSgis = GLConstants.GL_TEXTURE_MIN_LOD_SGIS,
+        TextureMaxLodSgis = GLConstants.GL_TEXTURE_MAX_LOD_SGIS,
+        TextureBaseLevelSgis = GLConstants.GL_TEXTURE_BASE_LEVEL_SGIS,
+        TextureMaxLevelSgis = GLConstants.GL_TEXTURE_MAX_LEVEL_SGIS,
+        TextureFilter4SizeSgis = GLConstants.GL_TEXTURE_FILTER4_SIZE_SGIS,
+        TextureClipmapCenterSgix = GLConstants.GL_TEXTURE_CLIPMAP_CENTER_SGIX,
+        TextureClipmapFrameSgix = GLConstants.GL_TEXTURE_CLIPMAP_FRAME_SGIX,
+        TextureClipmapOffsetSgix = GLConstants.GL_TEXTURE_CLIPMAP_OFFSET_SGIX,
+        TextureClipmapVirtualDepthSgix = GLConstants.GL_TEXTURE_CLIPMAP_VIRTUAL_DEPTH_SGIX,
+        TextureClipmapLodOffsetSgix = GLConstants.GL_TEXTURE_CLIPMAP_LOD_OFFSET_SGIX,
+        TextureClipmapDepthSgix = GLConstants.GL_TEXTURE_CLIPMAP_DEPTH_SGIX,
+        PostTextureFilterBiasSgix = GLConstants.GL_POST_TEXTURE_FILTER_BIAS_SGIX,
+        PostTextureFilterScaleSgix = GLConstants.GL_POST_TEXTURE_FILTER_SCALE_SGIX,
+        TextureLodBiasSSgix = GLConstants.GL_TEXTURE_LOD_BIAS_S_SGIX,
+        TextureLodBiasTSgix = GLConstants.GL_TEXTURE_LOD_BIAS_T_SGIX,
+        TextureLodBiasRSgix = GLConstants.GL_TEXTURE_LOD_BIAS_R_SGIX,
+        GenerateMipmapSgis = GLConstants.GL_GENERATE_MIPMAP_SGIS,
+        TextureCompareSgix = GLConstants.GL_TEXTURE_COMPARE_SGIX,
+        TextureCompareOperatorSgix = GLConstants.GL_TEXTURE_COMPARE_OPERATOR_SGIX,
+        TextureLequalRSgix = GLConstants.GL_TEXTURE_LEQUAL_R_SGIX,
+        TextureGequalRSgix = GLConstants.GL_TEXTURE_GEQUAL_R_SGIX,
+        TextureMaxClampSSgix = GLConstants.GL_TEXTURE_MAX_CLAMP_S_SGIX,
+        TextureMaxClampTSgix = GLConstants.GL_TEXTURE_MAX_CLAMP_T_SGIX,
+        TextureMaxClampRSgix = GLConstants.GL_TEXTURE_MAX_CLAMP_R_SGIX,
+        TextureUnnormalizedCoordinatesArm = GLConstants.GL_TEXTURE_UNNORMALIZED_COORDINATES_ARM
+    }
+}
+#pragma warning restore CA1069 // Enums values should not be duplicated

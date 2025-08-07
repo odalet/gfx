@@ -1,0 +1,84 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:s="using:ScanPlayer.Services"
+             xmlns:vm="using:ScanPlayer.ViewModels"
+             xmlns:vmt="using:ScanPlayer.ViewModels.Tools"
+             mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="150"
+             x:Class="ScanPlayer.Views.Tools.HeadsInfoView"
+             d:DataContext="{x:Static vm:DesignerViewModels.HeadsInfoViewModel}"
+             x:DataType="vmt:HeadsInfoViewModel" x:CompileBindings="True">
+  <UserControl.Resources>
+    <SolidColorBrush x:Key="RedBrush" Color="Red" />
+  </UserControl.Resources>
+  <UserControl.Styles>
+    <Style Selector="CheckBox">
+      <Setter Property="Foreground" Value="{DynamicResource ThemeForegroundBrush}"/>
+      <Setter Property="Background" Value="Transparent"/>
+      <Setter Property="BorderBrush" Value="{DynamicResource ThemeBorderMidBrush}"/>
+      <Setter Property="BorderThickness" Value="{DynamicResource ThemeBorderThickness}"/>
+      <Setter Property="Padding" Value="4,0,0,0"/>
+      <Setter Property="VerticalContentAlignment" Value="Center"/>
+      <Setter Property="HorizontalContentAlignment" Value="Left"/>
+      <Setter Property="Template">
+        <ControlTemplate>
+          <Grid ColumnDefinitions="Auto,*">
+            <Border Name="border"
+                    Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    CornerRadius="{TemplateBinding CornerRadius}"
+                    Width="18"
+                    Height="18"
+                    VerticalAlignment="Center">
+              <Panel>
+                <Path Name="checkMark"
+                      Fill="{TemplateBinding Foreground}"
+                      Width="11"
+                      Height="10"
+                      Stretch="Uniform"
+                      HorizontalAlignment="Center"
+                      VerticalAlignment="Center"
+                      Data="M 1145.607177734375,430 C1145.607177734375,430 1141.449951171875,435.0772705078125 1141.449951171875,435.0772705078125 1141.449951171875,435.0772705078125 1139.232177734375,433.0999755859375 1139.232177734375,433.0999755859375 1139.232177734375,433.0999755859375 1138,434.5538330078125 1138,434.5538330078125 1138,434.5538330078125 1141.482177734375,438 1141.482177734375,438 1141.482177734375,438 1141.96875,437.9375 1141.96875,437.9375 1141.96875,437.9375 1147,431.34619140625 1147,431.34619140625 1147,431.34619140625 1145.607177734375,430 1145.607177734375,430 z"/>
+                <Rectangle Name="indeterminateMark"
+                           Fill="{TemplateBinding Foreground}"
+                           Width="10"
+                           Height="10"
+                           Stretch="Uniform"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"/>
+              </Panel>
+            </Border>
+            <ContentPresenter Name="PART_ContentPresenter"
+                              TextBlock.Foreground="{TemplateBinding Foreground}"
+                              ContentTemplate="{TemplateBinding ContentTemplate}"
+                              Content="{TemplateBinding Content}"
+                              Margin="{TemplateBinding Padding}"
+                              RecognizesAccessKey="True"
+                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                              IsVisible="{TemplateBinding Content, Converter={x:Static ObjectConverters.IsNotNull}}"
+                              Grid.Column="1"/>
+          </Grid>
+        </ControlTemplate>
+      </Setter>
+    </Style>
+  </UserControl.Styles>
+  <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+    <StackPanel Orientation="Vertical" Spacing="0" Margin="0">
+      <CheckBox IsChecked="{Binding Head1Active, Mode=TwoWay}" IsVisible="{Binding Head1Exists, Mode=OneWay}" Margin="2" Foreground="{Binding Head1Brush, Mode=OneWay}">
+        <TextBlock Text="Head #1" />
+      </CheckBox>
+      <CheckBox IsChecked="{Binding Head2Active, Mode=TwoWay}" IsVisible="{Binding Head2Exists, Mode=OneWay}" Margin="2" Foreground="{Binding Head2Brush, Mode=OneWay}">
+        <TextBlock Text="Head #2" />
+      </CheckBox>
+      <CheckBox IsChecked="{Binding Head3Active, Mode=TwoWay}" IsVisible="{Binding Head3Exists, Mode=OneWay}" Margin="2" Foreground="{Binding Head3Brush, Mode=OneWay}">
+        <TextBlock Text="Head #3" />
+      </CheckBox>
+      <CheckBox IsChecked="{Binding Head4Active, Mode=TwoWay}" IsVisible="{Binding Head4Exists, Mode=OneWay}" Margin="2" Foreground="{Binding Head4Brush, Mode=OneWay}">
+        <TextBlock Text="Head #4" />
+      </CheckBox>
+    </StackPanel>
+  </ScrollViewer>
+</UserControl>
