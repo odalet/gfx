@@ -1,0 +1,79 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net472</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Views\obj\**" />
+    <EmbeddedResource Remove="Views\obj\**" />
+    <None Remove="Views\obj\**" />
+    <Page Remove="Views\obj\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="nlog.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="nlog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AvalonEdit" Version="6.0.1" />
+    <PackageReference Include="Common.Logging.NLog40" Version="3.4.1" />
+    <PackageReference Include="Dirkster.AvalonDock.Themes.VS2013" Version="4.50.1" />
+    <PackageReference Include="HelixToolkit.Wpf.SharpDX" Version="2.13.1" />
+    <PackageReference Include="MaterialDesignThemes" Version="3.2.0" />
+    <!--<PackageReference Include="MaterialDesignColors" Version="1.2.7" />-->
+    <!--<PackageReference Include="MaterialDesignThemes" Version="2.6.0" />-->
+    <PackageReference Include="MvvmLightLibsStd10" Version="5.4.1.1" />    
+    <PackageReference Include="NLog" Version="4.7.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="AddUp.Ail">
+      <HintPath>..\lib\AddUp.Ail.dll</HintPath>
+    </Reference>
+    <Reference Include="AddUp.Ail.IO">
+      <HintPath>..\lib\AddUp.Ail.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="AddUp.Geometry">
+      <HintPath>..\lib\AddUp.Geometry.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\Dash.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\dot.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\SegoeScript.dds">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\SegoeScript.fnt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="ScanPlayerWpf.Views.SceneOptionsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             d:DataContext="{Binding SceneOptionsViewModel, Source={StaticResource Locator}, Mode=OneTime}"
+             mc:Ignorable="d" d:DesignHeight="137.198" d:DesignWidth="150.914">
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+        <StackPanel Orientation="Vertical" Margin="4">
+            <CheckBox Content="Show Jumps" IsChecked="{Binding Workspace.SceneOptions.ShowJumps, Mode=TwoWay}" />
+            <CheckBox Content="Show Marks" IsChecked="{Binding Workspace.SceneOptions.ShowMarks, Mode=TwoWay}" />
+            <CheckBox Content="Show Points" IsChecked="{Binding Workspace.SceneOptions.ShowPoints, Mode=TwoWay}" />
+            <CheckBox Content="Show Hulls" IsChecked="{Binding Workspace.SceneOptions.ShowHulls, Mode=TwoWay}" />
+            <CheckBox Content="Show Platform" IsChecked="{Binding Workspace.SceneOptions.ShowPlatform, Mode=TwoWay}" />
+            <CheckBox Content="Show Head Refs" IsChecked="{Binding Workspace.SceneOptions.ShowHeadReferences, Mode=TwoWay}" />
+            <CheckBox Content="Show Head Fields" IsChecked="{Binding Workspace.SceneOptions.ShowHeadFields, Mode=TwoWay}" />
+            <CheckBox Content="Show Reference" IsChecked="{Binding Workspace.SceneOptions.ShowReference, Mode=TwoWay}" />
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>
