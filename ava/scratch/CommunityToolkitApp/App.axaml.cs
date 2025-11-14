@@ -3,7 +3,7 @@ using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Data.Core;
 using Avalonia.Data.Core.Plugins;
 using System.Linq;
-using Ava;
+//using Ava;
 using Avalonia.Markup.Xaml;
 using CommunityToolkitApp.ViewModels;
 using CommunityToolkitApp.Views;

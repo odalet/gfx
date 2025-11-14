@@ -10,10 +10,12 @@
     </Application.DataTemplates>
 
     <Application.Styles>
+        <ava:SimpleTheme />
+        <!--<ava:FluentTheme />-->
         <!-- <semi:SemiTheme /> -->
         <!-- <ava:TestTheme /> -->
         <!-- <local:TestTheme /> -->
-        <StyleInclude Source="./TestTheme.axaml" />
+        <!--<StyleInclude Source="./TestTheme.axaml" />-->
         <!-- <FluentTheme /> -->
         <!-- <ava:AvaThemes /> -->
     </Application.Styles>

@@ -1,0 +1,79 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:ClassModifier="internal">
+
+  <Styles.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/AdornerLayer.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/Button.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/RadioButton.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/Expander.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/RepeatButton.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/ToggleSwitch.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/ButtonSpinner.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/ToggleButton.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/DropDownButton.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/PathIcon.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/CheckBox.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/ToolTip.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/Label.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/ComboBoxItem.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/ComboBox.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/Window.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/Carousel.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/CaptionButtons.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/TitleBar.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/TextBox.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/AutoCompleteBox.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/DataValidationErrors.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/FlyoutPresenter.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/MenuFlyoutPresenter.axaml" />
+        <!--<MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/GroupBox.axaml" />-->
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/GridSplitter.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/HyperlinkButton.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/ItemsControl.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/ListBoxItem.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/ListBox.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/ScrollBar.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/ScrollViewer.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/TabStrip.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/TabStripItem.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/TabControl.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/TabItem.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/PopupRoot.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/OverlayPopupHost.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/WindowNotificationManager.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/EmbeddableControlRoot.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/TransitioningContentControl.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/TreeView.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/TreeViewItem.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/ProgressBar.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/Separator.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/Menu.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/MenuItem.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/ContextMenu.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/CalendarButton.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/CalendarDayButton.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/CalendarItem.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/Calendar.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/CalendarDatePicker.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/Slider.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/NotificationCard.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/NumericUpDown.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/DateTimePickerShared.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/DatePicker.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/TimePicker.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/SplitView.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/ManagedFileChooser.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/SplitButton.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/SelectableTextBlock.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/RefreshContainer.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/RefreshVisualizer.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/ThemeVariantScope.axaml" />
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/HeaderedContentControl.axaml"/>
+        <MergeResourceInclude Source="avares://Ava.Themes.Simple/Controls/TextSelectionHandle.axaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </Styles.Resources>
+</Styles>

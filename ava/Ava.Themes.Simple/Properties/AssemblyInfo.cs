@@ -1,0 +1,3 @@
+using Avalonia.Metadata;
+
+[assembly: XmlnsDefinition("https://odalet/ava", "Ava.Themes.Simple")]

@@ -1,6 +1,6 @@
-﻿using Avalonia;
-using Avalonia.ReactiveUI;
-using System;
+﻿using System;
+using Avalonia;
+using ReactiveUI.Avalonia;
 
 namespace ReactiveUIApp;
 

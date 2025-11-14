@@ -30,12 +30,12 @@ public partial class MainWindowViewModel : ViewModelBase
         if (app is null) return;
         
         app.RequestedThemeVariant = theme;
-        
+
         if (theme == ThemeVariant.Default)
             app.RegisterSystemThemeAwareness();
         else
             app.UnregisterSystemThemeAwareness();
-        
+
         OnPropertyChanged(nameof(CurrentThemeName));
     }
 }

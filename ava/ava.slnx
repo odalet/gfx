@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/scratch/">
+    <Project Path="scratch/CommunityToolkitApp/CommunityToolkitApp.csproj" />
+    <Project Path="scratch/ConsoleApp1/ConsoleApp1.csproj" />
+    <Project Path="scratch/ReactiveUIApp/ReactiveUIApp.csproj" />
+  </Folder>
+  <Folder Name="/Solution Files/">
+    <File Path="Directory.Build.props" />
+  </Folder>
+  <Project Path="Ava.Themes.Fluent/Ava.Themes.Fluent.csproj" />
+  <Project Path="Ava.Themes.Simple/Ava.Themes.Simple.csproj" Id="83fa29dd-bbb0-498a-9a6c-2a8ab4be23e4" />
+  <Project Path="Ava/Ava.csproj" />
+</Solution>
