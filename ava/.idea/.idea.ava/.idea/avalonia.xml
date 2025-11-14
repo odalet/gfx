@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="Ava/AvaThemes.axaml" value="scratch/CommunityToolkitApp/CommunityToolkitApp.csproj" />
+        <entry key="Ava/Styles/Button.axaml" value="scratch/CommunityToolkitApp/CommunityToolkitApp.csproj" />
+        <entry key="Ava/Styles/Styles.axaml" value="scratch/CommunityToolkitApp/CommunityToolkitApp.csproj" />
+        <entry key="Ava/TestTheme.axaml" value="scratch/CommunityToolkitApp/CommunityToolkitApp.csproj" />
+        <entry key="Ava/Themes/Accents/BasePalette.axaml" value="scratch/CommunityToolkitApp/CommunityToolkitApp.csproj" />
+        <entry key="Ava/Themes/Controls/all.axaml" value="scratch/CommunityToolkitApp/CommunityToolkitApp.csproj" />
+        <entry key="Ava/Themes/Dark.axaml" value="scratch/CommunityToolkitApp/CommunityToolkitApp.csproj" />
+        <entry key="Ava/Themes/Dark/BasePalette.axaml" value="scratch/CommunityToolkitApp/CommunityToolkitApp.csproj" />
+        <entry key="Ava/Themes/Dark/BaseResources.axaml" value="scratch/CommunityToolkitApp/CommunityToolkitApp.csproj" />
+        <entry key="Ava/Themes/HighContrast.axaml" value="scratch/CommunityToolkitApp/CommunityToolkitApp.csproj" />
+        <entry key="Ava/Themes/Light.axaml" value="scratch/CommunityToolkitApp/CommunityToolkitApp.csproj" />
+        <entry key="Ava/Themes/Light/BasePalette.axaml" value="scratch/CommunityToolkitApp/CommunityToolkitApp.csproj" />
+        <entry key="Ava/Themes/Light/BaseResources.axaml" value="scratch/CommunityToolkitApp/CommunityToolkitApp.csproj" />
+        <entry key="Ava/Themes/Palettes/BasePalette.axaml" value="scratch/CommunityToolkitApp/CommunityToolkitApp.csproj" />
+        <entry key="Ava/Themes/Palettes/BaseResources.axaml" value="scratch/CommunityToolkitApp/CommunityToolkitApp.csproj" />
+        <entry key="Ava/Themes/Red.axaml" value="scratch/CommunityToolkitApp/CommunityToolkitApp.csproj" />
+        <entry key="Ava/Themes/Shared/Button.axaml" value="scratch/CommunityToolkitApp/CommunityToolkitApp.csproj" />
+        <entry key="Ava/Themes/Shared/all.axaml" value="scratch/CommunityToolkitApp/CommunityToolkitApp.csproj" />
+        <entry key="Ava/UserControl1.axaml" value="scratch/CommunityToolkitApp/CommunityToolkitApp.csproj" />
+        <entry key="AvaApp/App.axaml" value="AvaApp/AvaApp.csproj" />
+        <entry key="AvaApp/MainWindow.axaml" value="AvaApp/AvaApp.csproj" />
+        <entry key="scratch/CommunityToolkitApp/App.axaml" value="scratch/CommunityToolkitApp/CommunityToolkitApp.csproj" />
+        <entry key="scratch/CommunityToolkitApp/TestTheme.axaml" value="scratch/CommunityToolkitApp/CommunityToolkitApp.csproj" />
+        <entry key="scratch/CommunityToolkitApp/Views/MainWindow.axaml" value="scratch/CommunityToolkitApp/CommunityToolkitApp.csproj" />
+        <entry key="scratch/CommunityToolkitApp/shared.axaml" value="scratch/CommunityToolkitApp/CommunityToolkitApp.csproj" />
+        <entry key="scratch/ReactiveUIApp/App.axaml" value="scratch/ReactiveUIApp/ReactiveUIApp.csproj" />
+        <entry key="scratch/ReactiveUIApp/Views/MainWindow.axaml" value="scratch/ReactiveUIApp/ReactiveUIApp.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
