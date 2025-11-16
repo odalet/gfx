@@ -1,5 +1,5 @@
 ﻿using System.Windows.Input;
-using Ava;
+using Ava.Theming;
 using Avalonia;
 using Avalonia.Styling;
 using CommunityToolkit.Mvvm.Input;
@@ -10,10 +10,10 @@ public partial class MainWindowViewModel : ViewModelBase
 {
     public MainWindowViewModel()
     {
-        SelectDefaultThemeCommand = new RelayCommand(() => SelectTheme(AvaThemes.Default));
-        SelectLightThemeCommand = new RelayCommand(() => SelectTheme(AvaThemes.Light));
-        SelectDarkThemeCommand = new RelayCommand(() => SelectTheme(AvaThemes.Dark));
-        SelectHighContrastThemeCommand = new RelayCommand(() => SelectTheme(AvaThemes.HighContrast));
+        SelectDefaultThemeCommand = new RelayCommand(() => SelectTheme(ThemingUtils.Default));
+        SelectLightThemeCommand = new RelayCommand(() => SelectTheme(ThemingUtils.Light));
+        SelectDarkThemeCommand = new RelayCommand(() => SelectTheme(ThemingUtils.Dark));
+        SelectHighContrastThemeCommand = new RelayCommand(() => SelectTheme(ThemingUtils.HighContrast));
     }
 
     public ICommand SelectDefaultThemeCommand { get; }
@@ -23,7 +23,10 @@ public partial class MainWindowViewModel : ViewModelBase
 
     public string? CurrentThemeName =>
         Application.Current?.ActualThemeVariant?.ToString();
-    
+
+    public ExampleViewModel ExampleViewModel { get; } = new();
+
+
     private void SelectTheme(ThemeVariant theme)
     {
         var app = Application.Current;

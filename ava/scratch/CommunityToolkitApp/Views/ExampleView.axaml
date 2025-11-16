@@ -1,0 +1,44 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:CommunityToolkitApp.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="250"
+             x:Class="CommunityToolkitApp.Views.ExampleView"
+             x:DataType="vm:ExampleViewModel">
+    <Design.DataContext>
+        <vm:ExampleViewModel />
+    </Design.DataContext>
+    <UserControl.Styles>
+        <Style Selector="TextBlock.demo">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
+    </UserControl.Styles>
+    <Grid Classes="demo" RowDefinitions="auto, auto, auto, auto, auto"
+          ColumnDefinitions="1*, 1*"
+          ShowGridLines="False">
+        <StackPanel Classes="demo" Grid.Row="0" Grid.Column="0" Margin="4" Orientation="Horizontal" HorizontalAlignment="Stretch">
+            <TextBlock Text="Global: " />
+            <TextBlock Text="{Binding CurrentThemeName, Mode=OneWay}" FontWeight="Bold" />
+        </StackPanel>
+        <StackPanel Classes="demo" Grid.Row="0" Grid.Column="1" Margin="4" Orientation="Horizontal" HorizontalAlignment="Stretch">
+            <TextBlock Text="Local: " />
+            <TextBlock Text="{Binding $self.ActualThemeVariant, Mode=OneWay}" FontWeight="Bold" />
+        </StackPanel>
+        <Button Classes="demo" Grid.Row="1" Grid.Column="0" Margin="4" Content="Button" />
+        <StackPanel Classes="demo" Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+            <RadioButton Classes="demo" Margin="4" Content="R1" />
+            <RadioButton Classes="demo" Margin="4" Content="R2" />
+        </StackPanel>
+        <TextBox Classes="demo" Grid.Row="2" Grid.Column="0" Margin="4" Text="TextBox" />
+        <CheckBox Classes="demo" Grid.Row="2" Grid.Column="1" Margin="4" Content="Check" />
+        <ComboBox Classes="demo" Grid.Row="3" Grid.Column="0" Margin="4" HorizontalAlignment="Stretch" SelectedIndex="0">
+            <ComboBox.Items>
+                <ComboBoxItem Content="Item #1" />
+                <ComboBoxItem Content="Item #2" />
+                <ComboBoxItem Content="Item #3" />
+            </ComboBox.Items>
+        </ComboBox>
+    </Grid>
+</UserControl>

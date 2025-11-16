@@ -1,0 +1,23 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="using:Ava.Controls">
+    <Design.PreviewWith>
+        <Border Padding="20">
+            <Grid RowDefinitions="4" ColumnDefinitions="4">
+                <controls:GroupBox Header="GroupBox" Grid.Row="0" Grid.Column="0">
+                    <StackPanel>
+                        <RadioButton Content="RadioButton1" />
+                        <RadioButton Content="RadioButton2" />
+                    </StackPanel>
+                </controls:GroupBox>
+            </Grid>
+        </Border>
+    </Design.PreviewWith>
+    <Styles.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <MergeResourceInclude Source="/Styles/GroupBox.axaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Styles.Resources>
+</Styles>

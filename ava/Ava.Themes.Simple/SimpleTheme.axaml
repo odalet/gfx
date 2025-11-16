@@ -1,14 +1,15 @@
 <Styles x:Class="Ava.Themes.Simple.SimpleTheme"
         xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <Styles.Resources>
-    <ResourceDictionary>
-      <ResourceDictionary.MergedDictionaries>
-        <MergeResourceInclude Source="/Accents/Base.axaml" />
-        <MergeResourceInclude Source="/Strings/InvariantResources.axaml" />
-      </ResourceDictionary.MergedDictionaries>
-    </ResourceDictionary>
-  </Styles.Resources>
-  
-  <StyleInclude Source="/Controls/SimpleControls.axaml" />
+    <Styles.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <MergeResourceInclude Source="/Accents/Base.axaml" />
+                <MergeResourceInclude Source="/Strings/InvariantResources.axaml" />
+                <MergeResourceInclude Source="/Compat.axaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Styles.Resources>
+
+    <StyleInclude Source="/Controls/SimpleControls.axaml" />
 </Styles>

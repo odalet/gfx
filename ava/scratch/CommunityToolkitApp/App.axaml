@@ -8,15 +8,14 @@
     <Application.DataTemplates>
         <local:ViewLocator />
     </Application.DataTemplates>
-
+    <Application.Resources>
+        <ResourceDictionary>
+            <ava:FluentTheme x:Key="FluentTheme" />
+            <ava:SimpleTheme x:Key="SimpleTheme" />
+            <StyleInclude x:Key="AvaControls" Source="avares://Ava/Styles/Controls.axaml" />
+        </ResourceDictionary>
+    </Application.Resources>
     <Application.Styles>
-        <ava:SimpleTheme />
-        <!--<ava:FluentTheme />-->
-        <!-- <semi:SemiTheme /> -->
-        <!-- <ava:TestTheme /> -->
-        <!-- <local:TestTheme /> -->
-        <!--<StyleInclude Source="./TestTheme.axaml" />-->
-        <!-- <FluentTheme /> -->
-        <!-- <ava:AvaThemes /> -->
+
     </Application.Styles>
 </Application>
